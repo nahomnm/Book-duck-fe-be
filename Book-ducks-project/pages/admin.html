@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin - Book Ducks</title>
+  <link rel="stylesheet" href="../css/variables.css"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/admin.css"/>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo-link">BOOK DUCKS</a>
+    <div class="nav-right" id="nav-right"></div>
+  </nav>
+
+  <main class="admin-page">
+    <div class="admin-header">
+      <h1>Admin Panel</h1>
+      <p>Lägg till nya böcker genom att fylla i formuläret nedan.</p>
+    </div>
+
+    <div class="theme-switcher">
+      <button onclick="setTheme('light')">Light</button>
+      <button onclick="setTheme('dark')">Dark</button>
+      <button onclick="setTheme('warm')">Warm</button>
+    </div>
+
+    <form class="admin-form" id="admin-form">
+      <input type="text" id="tittle" placeholder="Bokens titel" required />
+      <input type="text" id="author" placeholder="Författare" required />
+      <input type="number" id="pages" placeholder="Antal sidor" required />
+      <input type="date" id="releaseDate" required />
+      <textarea id="description" placeholder="Beskrivning av boken" required></textarea>
+      
+      <!-- Här är det viktiga fältet för bild-URL -->
+      <input type="url" id="cover" placeholder="Klistra in bild-URL (t.ex. https://...)" required />
+
+      <button type="submit">Spara bok</button>
+    </form>
+
+    <div id="admin-message"></div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 Book Ducks. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/admin.js"></script>
+</body>
+</html>

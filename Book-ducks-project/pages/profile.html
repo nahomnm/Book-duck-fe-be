@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Profil - Book Ducks</title>
+    <link rel="stylesheet" href="../css/variables.css"/>
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/profile.css"/>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html" class="logo-link">BOOK DUCKS</a>
+        <div class="nav-center">
+            <input type="text" id="search-input" placeholder="Sök böcker..."/>
+        </div>
+        <div class="nav-right" id="nav-right"></div>
+    </nav>
+
+    <main class="profile-page">
+        <div class="profile-header">
+            <h1 id="profile-username"></h1>
+            <p>Ditt bibliotek och dina sparade betyg.</p>
+        </div>
+
+        <div class="profile-divider"></div>
+
+        <div class="profile-section">
+            <h2>Att läsa-lista</h2>
+            <p class="section-subtitle">Böcker du vill läsa senare.</p>
+            <div class="profile-actions">
+                <button onclick="sortReadingByTitle()">Sortera titel</button>
+                <button onclick="sortReadingByAuthor()">Sortera författare</button>
+            </div>
+            <section class="reading-list" id="reading-list"></section>
+        </div>
+
+        <div class="profile-divider"></div>
+
+        <div class="profile-section">
+            <h2>Betygsatta böcker</h2>
+            <p class="section-subtitle">Böcker du har betygsatt.</p>
+            <div class="profile-actions">
+                <button onclick="sortRatingsByTitle()">Sortera titel</button>
+                <button onclick="sortRatingsByRating()">Sortera betyg</button>
+            </div>
+            <section class="reading-list" id="ratings-list"></section>
+        </div>
+    </main>
+
+    <script src="../js/profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+.profile-page {
+  padding: 40px 60px;
+}
+
+.profile-header {
+  margin-bottom: 40px;
+}
+
+.profile-header h1 {
+  font-size: var(--font-xl);
+  margin-bottom: 10px;
+}
+
+.profile-header p {
+  color: var(--secondary-text);
+  font-size: var(--font-medium);
+}
+
+.profile-section {
+  margin-top: 40px;
+}
+
+.profile-section h2 {
+  font-size: var(--font-xl);
+  margin-bottom: 10px;
+}
+
+.profile-section p {
+  color: var(--secondary-text);
+  margin-bottom: 25px;
+}
+
+.profile-actions {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 35px;
+}
+
+.profile-actions button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: var(--radius-small);
+  background: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.reading-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.profile-book-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-medium);
+  overflow: hidden;
+  transition: 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+}
+
+.profile-book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.profile-book-image {
+  width: 100%;
+  height: 260px;
+  /* Ändrat till contain för att visa hela bilden sann till kortet */
+  object-fit: contain; 
+  display: block;
+  background-color: #f9f9f9; /* Hjälper till att fylla ut kortet snyggt */
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+.profile-book-content {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.profile-book-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+
+.profile-book-content p {
+  color: var(--secondary-text);
+  font-size: var(--font-medium);
+  margin-bottom: 8px;
+}
+
+.remove-btn {
+  margin-top: auto;
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius-small);
+  background: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+  .reading-list { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 900px) {
+  .reading-list { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .profile-page { padding: 30px 20px; }
+  .reading-list { grid-template-columns: 1fr; }
+}
