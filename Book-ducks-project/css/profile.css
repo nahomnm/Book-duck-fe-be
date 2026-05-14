@@ -71,10 +71,9 @@
 .profile-book-image {
   width: 100%;
   height: 260px;
-  /* Ändrat till contain för att visa hela bilden sann till kortet */
   object-fit: contain; 
   display: block;
-  background-color: #f9f9f9; /* Hjälper till att fylla ut kortet snyggt */
+  background-color: #f9f9f9;
   padding: 5px;
   box-sizing: border-box;
 }
